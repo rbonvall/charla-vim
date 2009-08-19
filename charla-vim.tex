@@ -135,41 +135,27 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Movimientos}
-    \begin{itemize}
-        \item (En modo normal) las teclas son comandos: no sirven para
-            escribir texto.
-        \item Los comandos, en general, son:
-            \begin{itemize}
-                \item movimientos
-                \item operadores
-            \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
     \frametitle{Los comandos más paltosos del mundo}
     \begin{itemize}
         \item \key{.}: repite el último comando
         \item \key{u}: deshace el último comando (\foreign{undo})
+        \item \longkey{Ctrl R}: rehace lo deshecho (\foreign{redo})
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Movimientos}
-    \key{h}, \key{j}, \key{k}, \key{l}
+    \frametitle{Movimientos \cmd{\hspace{1.5em}}}
     \begin{itemize}
-        \item Equivalentes a \key{$\leftarrow$}, \key{$\downarrow$},
-            \key{$\uparrow$}, \key{$\rightarrow$}.
-        \item Posición estratégica en el teclado:  permiten moverse sin
-            levantar las manos del teclado.
-        \item Mnemónicos:
-            \begin{itemize}
-                \item la \key{j} parece ser una letra que apunta hacia abajo
-                \item la \key{k} parece ser una letra que apunta hacia arriba
-                \item las teclas \key{h} y \key{l} están a la izquierda y a la derecha
-                    de las anteriores en el teclado
-            \end{itemize}
+        \item \good \key{h}, \key{j}, \key{k}, \key{l} =
+              \bad \key{$\leftarrow$}, \key{$\downarrow$},
+                 \key{$\uparrow$}, \key{$\rightarrow$}.
+        \item \key{w}, \key{b}, \key{e} $\sim$
+            \foreign{word}, \foreign{begin}, \foreign{end}.
+        \item \key{0}, \key{\$}: comienzo, final de línea
+        \item \key{g}\key{g}, \key{G}: comienzo, final del archivo
+        \item \key{f}\anykey, \key{F}\anykey:
+            siguiente, anterior ``\anykey{}'' (\foreign{find})
+        \item \key{\%}: aparea paréntesis
     \end{itemize}
 \end{frame}
 
@@ -177,23 +163,6 @@
 %  \item \key{`}\anykey, \key{'}\anykey
 %  \item \longkey{Ctrl O}, \longkey{Ctrl I}
 %  \item \key{H}, \key{M}, \key{L}
-
-\begin{frame}
-    \frametitle{Movimientos}
-    \framesubtitle{Movimientos por palabra}
-    \begin{itemize}
-        \item \key{w}: avanza al comienzo de la palabra siguiente
-            (\foreign{word})
-        \item \key{b}: retrocede al comienzo de una palabra
-            (\foreign{beginning})
-        \item \key{e}: avanza al final de la palabra
-            (\foreign{end})
-        \item Se considera como palabra cualquier secuencia de letras, dígitos y
-            guiones de subrayado.
-        \item \key{W}, \key{B} y \key{E} consideran como palabra cualquier
-            secuencia de caracteres separados por espacios.
-    \end{itemize}
-\end{frame}
 
 \begin{frame}
     \frametitle{Movimientos}
