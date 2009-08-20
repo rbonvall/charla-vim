@@ -442,10 +442,10 @@
 \begin{frame}
     \frametitle{Mapeos y abreviaciones}
     \begin{itemize}
-        \item \key{:}\typed{map \placeholder{secuencia} \placeholder{secuencia}}\longkey{Enter}
-        \item \key{:}\typed{imap \placeholder{secuencia} \placeholder{secuencia}}\longkey{Enter}
-        \item \key{:}\typed{noremap \placeholder{secuencia} \placeholder{secuencia}}\longkey{Enter}
-        \item \key{:}\typed{iabbrev \placeholder{abreviación} \placeholder{texto}}\longkey{Enter}
+        \item \key{:}\typed{map <Space> <C-f>}\longkey{Enter}
+        \item \key{:}\typed{imap jj <Esc>}\longkey{Enter}
+        \item \key{:}\typed{imap FOR for()<Esc>i}\longkey{Enter}
+        \item \key{:}\typed{iabbrev pq porque}\longkey{Enter}
     \end{itemize}
 \end{frame}
 
@@ -459,15 +459,38 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Ventanas}
-    \begin{itemize}
-        \item \key{:}\typed{new}\longkey{Enter}
-        \item \key{:}\typed{vnew}\longkey{Enter}
-        \item \longkey{Ctrl W}\key{n}
-        \item \longkey{Ctrl W}\longkey{Ctrl W}
-        \item \longkey{Ctrl W}\key{j},\longkey{Ctrl W}\key{l}
-        \item \longkey{Ctrl W}\key{J},\longkey{Ctrl W}\key{L}
-    \end{itemize}
+    %\only<1>{\includegraphics[width=\textwidth]{capturas/macro-01-nq8}}
+    %\only<2>{\includegraphics[width=\textwidth]{capturas/macro-02-nq8}}
+    %\only<3>{\includegraphics[width=\textwidth]{capturas/macro-03-nq8}}
+    %\only<4>{\includegraphics[width=\textwidth]{capturas/macro-04-nq8}}
+    %\only<5>{\includegraphics[width=\textwidth]{capturas/macro-05-nq8}}
+    %\only<6>{\includegraphics[width=\textwidth]{capturas/macro-06-nq8}}
+    %\only<7>{\includegraphics[width=\textwidth]{capturas/macro-07-nq8}}
+    %\only<8>{\includegraphics[width=\textwidth]{capturas/macro-08-nq8}}
+    %\only<9>{\includegraphics[width=\textwidth]{capturas/macro-09-nq8}}
+    %\only<10>{\includegraphics[width=\textwidth]{capturas/macro-10-nq8}}
+    %\\
+    \uncover<2->{\key{q}\key{z}}
+    \uncover<3->{\key{y}\key{y}}
+    \uncover<4->{\longkey{Ctrl A}}
+    \uncover<5->{\key{f}\key{\{}}
+    \uncover<6->{\longkey{Ctrl A}}
+    \uncover<7->{\key{q}}
+    \uncover<8->{\key{\@}\key{z}}
+    \uncover<9->{\key{\@}\key{\@}}
+    \uncover<10->{\key{1}\key{0}\key{\@}\key{\@}}
 \end{frame}
+
+%\begin{frame}
+%    \frametitle{Ventanas}
+%    \begin{itemize}
+%        \item \key{:}\typed{new}\longkey{Enter}
+%        \item \key{:}\typed{vnew}\longkey{Enter}
+%        \item \longkey{Ctrl W}\key{n}
+%        \item \longkey{Ctrl W}\longkey{Ctrl W}
+%        \item \longkey{Ctrl W}\key{j},\longkey{Ctrl W}\key{l}
+%        \item \longkey{Ctrl W}\key{J},\longkey{Ctrl W}\key{L}
+%    \end{itemize}
+%\end{frame}
 
 \end{document}
