@@ -12,10 +12,6 @@
 \setbeamercovered{transparent}
 %\includeonlyframes{current}
 
-%\newcommand{\key}[1]{\framebox[1.8em]{\rule{0pt}{1em}#1}}
-\newcommand{\placeholder}[1]{%
-    \emph{$\langle$#1$\rangle$}%
-}
 \newcommand{\key}[1]{%
     \fcolorbox{black}{lightgray}{\rule[-.2em]{0pt}{1em}\makebox[1em][l]{#1}}%
 }
@@ -34,16 +30,9 @@
 \newcommand{\typed}[1]{%
     \fcolorbox{blue!25!green!75}{blue!25!green!75}{\rule[-.2em]{0pt}{1em}\makebox{\texttt{#1}}}%
 }
-\newcommand{\cursor}[1]{%   TO BE IMPROVED
-    \fcolorbox{black}{black}{\textcolor{white}{\hspace{-3.5pt}#1\hspace{-3.5pt}}}%
-    %\fbox{$\!$#1$\!$}
-}
-\newcommand{\vimexample}[1]{%
-    \fbox{\texttt{#1}}%
-}
+\newcommand{\placeholder}[1]{ \emph{$\langle$#1$\rangle$} }
 \newcommand{\good}{ \textcolor{blue!25!green!75}{\Large\smiley} }
-\newcommand{\bad}{  \textcolor{red}{\Large\frownie} }
-
+\newcommand{\bad}{ \textcolor{red}{\Large\frownie} }
 \newcommand{\foreign}{\textit}
 
 \title {Edición eficiente de texto con Vim}
@@ -296,30 +285,6 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Ejemplos de movimientos en una línea}
-
-    \only<1>{\vimexample{Dábale arroz a la \cursor{z}orra el abad.}}
-    \only<2>{\vimexample{Dábale arroz a \cursor{l}a zorra el abad.}}
-    \only<3>{\vimexample{\cursor{D}ábale arroz a la zorra el abad.}}
-    \only<4>{\vimexample{Dábale arro\cursor{z} a la zorra el abad.}}
-    \only<5>{\vimexample{Dábale arroz a \cursor{l}a zorra el abad.}}
-    \only<6>{\vimexample{Dábale arroz a la zorra el abad\cursor{.}}}
-    \only<7>{\vimexample{Dábale arroz a l\cursor{a} zorra el abad.}}
-    \only<8>{\vimexample{Dábale arroz a la \cursor{z}orra el abad.}}
-    \\
-    \uncover<2->{\key{b}}
-    \uncover<3->{\key{0}}
-    \uncover<4->{\key{f}\key{z}}
-    \uncover<5->{\key{2}\key{w}}
-    \uncover<6->{\key{\$}}
-    \uncover<7->{\key{1}\key{5}\key{h}}
-    \uncover<8->{\key{;}}
-\end{frame}
-
-
-
-
-\begin{frame}
     \frametitle{Operaciones básicas}
     \begin{itemize}
         \item \key{$\sim$}:  cambia minúsculas/mayúsculas del caracter bajo el
@@ -335,102 +300,6 @@
         %\item \key{u}: deshace el último comando (\foreign{undo})
         %\item \key{.}: repite el último comando
     \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Ejemplos de operaciones básicas}
-
-    \only<1>{\vimexample{hola, te invito a m\cursor{i} fiezta de 11 años.}}
-    \only<2>{\vimexample{\cursor{h}ola, te invito a mi fiezta de 11 años.}}
-    \only<3>{\vimexample{H\cursor{o}la, te invito a mi fiezta de 11 años.}}
-    \only<4>{\vimexample{Hola, te invito a mi fie\cursor{z}ta de 11 años.}}
-    \only<5>{\vimexample{Hola, te invito a mi fie\cursor{s}ta de 11 años.}}
-    \only<6>{\vimexample{Hola, te invito a mi fiesta de \cursor{1}1 años.}}
-    \only<7>{\vimexample{Hola, te invito a mi fiesta de \cursor{1}5 años.}}
-    \only<8>{\vimexample{Hola, te invito a mi fiesta de \cursor{1}9 años.}}
-    \only<9>{\vimexample{Hola, te invito a mi fiesta de \cursor{1}5 años.}}
-    \\
-    \uncover<2->{\key{0}}
-    \uncover<3->{\key{$\sim$}}
-    \uncover<4->{\key{f}\key{z}}
-    \uncover<5->{\key{r}\key{s}}
-    \uncover<6->{\key{2}\key{w}}
-    \uncover<7->{\key{4}\longkey{Ctrl A}}
-    \uncover<8->{\key{.}}
-    \uncover<9->{\key{u}}
-\end{frame}
-
-%%%%%%%%%%%%%%%% PRUEBA TEST E %%%%%%%%%%%%%%%
-\newcommand{\exampleline}[1]{\makebox[28em][l]{\texttt{#1}}}
-\newcommand{\examplelines}[1]{\fbox{\parbox{28em}{#1}}}
-\begin{frame}[fragile,label=current]
-    \frametitle{Otro ejemplo más}
-    \only<1>{\examplelines{
-        \exampleline{En un lugar de la marcha}
-        \exampleline{de cuyo nom\cursor{b}re no quiero hacordarme}
-    }}
-    \only<2>{\examplelines{
-        \exampleline{En un lugar\cursor{ }de la marcha}
-        \exampleline{de cuyo nombre no quiero hacordarme}
-    }}
-    \only<3>{\examplelines{
-        \exampleline{En un lugar de la \cursor{m}archa}
-        \exampleline{de cuyo nombre no quiero hacordarme}
-    }}
-    \only<4>{\examplelines{
-        \exampleline{En un lugar de la M\cursor{a}rcha}
-        \exampleline{de cuyo nombre no quiero hacordarme}
-    }}
-    \only<5>{\examplelines{
-        \exampleline{En un lugar de \cursor{l}a Marcha}
-        \exampleline{de cuyo nombre no quiero hacordarme}
-    }}
-    \only<6>{\examplelines{
-        \exampleline{En un lugar de L\cursor{a} Marcha}
-        \exampleline{de cuyo nombre no quiero hacordarme}
-    }}
-    \only<7>{\examplelines{
-        \exampleline{En un lugar de la Ma\cursor{r}cha}
-        \exampleline{de cuyo nombre no quiero hacordarme}
-    }}
-    \only<8>{\examplelines{
-        \exampleline{En un lugar de la Ma\cursor{n}cha}
-        \exampleline{de cuyo nombre no quiero hacordarme}
-    }}
-    \only<9>{\examplelines{
-        \exampleline{En un lugar de la Mancha}
-        \exampleline{de cuyo nombre no qu\cursor{i}ero hacordarme}
-    }}
-   \only<10>{\examplelines{
-        \exampleline{En un lugar de la Mancha}
-        \exampleline{de cuyo nombre no quiero \cursor{h}acordarme}
-    }}
-   \only<11>{\examplelines{
-        \exampleline{En un lugar de la Mancha}
-        \exampleline{de cuyo nombre no quiero \cursor{a}cordarme}
-    }}
-   \only<12,14>{\examplelines{
-        \exampleline{En un lugar de la Mancha}
-        \exampleline{de cuyo nombre no quiero acordarm\cursor{e}}
-    }}
-   \only<13>{\examplelines{
-        \exampleline{En un lugar de la Mancha}
-        \exampleline{de cuyo nombre no quiero acordarme\cursor{h}}
-    }}
-    \\
-    \uncover <2->{\key{k}}
-    \uncover <3->{\key{3}\key{w}}
-    \uncover <4->{\key{$\sim$}}
-    \uncover <5->{\key{F}\key{l}}
-    \uncover <6->{\key{.}}
-    \uncover <7->{\key{f}\key{r}}
-    \uncover <8->{\key{r}\key{n}}
-    \uncover <9->{\key{j}}
-    \uncover <10->{\key{f}\key{h}}
-    \uncover <11->{\key{x}}
-    \uncover<12->{\key{\$}}
-    \uncover<13->{\key{p}}
-    \uncover<14->{\key{u}}
 \end{frame}
 
 \begin{frame}
