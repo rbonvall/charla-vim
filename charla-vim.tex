@@ -313,51 +313,115 @@
     \frametitle{Comandos paltosos en modo inserción}
     \begin{itemize}
         \item \longkey{Ctrl H}, \longkey{Ctrl U}: borra el caracter
-            anterior/hasta el final de la línea
-        \item \longkey{Ctrl T}, \longkey{Ctrl D}: indenta/dedenta
+            anterior, hasta el final de la línea
+        \item \longkey{Ctrl T}, \longkey{Ctrl D}: indenta, dedenta
         \item \longkey{Ctrl Y}, \longkey{Ctrl E}: copia el caracter de arriba, abajo
-        \item \longkey{Ctrl P}, \longkey{Ctrl N}: completa la palabra
+        \item \longkey{Ctrl P}, \longkey{Ctrl N}: completa con palabra anterior, posterior
         \item \longkey{Ctrl X}\longkey{Ctrl F}: completa con nombre de archivo
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Ejemplos de uso de operadores}
-    \begin{itemize}
-        \item \key{c}\key{w}\typed{lala}\longkey{Esc}
-        \item \key{b}\key{y}\key{\$}\key{0}\key{P}
-        \item \key{d}\key{d}\key{p} 
-        \item \key{g}\key{g}\key{O}\typed{\#include
-            "lala.h"}\longkey{Esc}\longkey{Ctrl O}
-        \item \longkey{Ctrl A}\key{2}\key{j}\key{.}
-        \item \key{I}\typed{/$*$}\longkey{Esc}\key{A}\typed{$*$/}\longkey{Esc}
-        \item \key{F}\key{$\{$}\key{d}\key{\%}\key{20}\key{k}\key{p}
-    \end{itemize}
+    %\only<1>{\includegraphics[width=\textwidth]{capturas/edit-01-nq8}}
+    %\only<2>{\includegraphics[width=\textwidth]{capturas/edit-02-nq8}}
+    %\only<3>{\includegraphics[width=\textwidth]{capturas/edit-03-nq8}}
+    %\only<4>{\includegraphics[width=\textwidth]{capturas/edit-04-nq8}}
+    %\only<5>{\includegraphics[width=\textwidth]{capturas/edit-05-nq8}}
+    %\only<6>{\includegraphics[width=\textwidth]{capturas/edit-06-nq8}}
+    %\only<7>{\includegraphics[width=\textwidth]{capturas/edit-07-nq8}}
+    %\only<8>{\includegraphics[width=\textwidth]{capturas/edit-08-nq8}}
+    %\only<9>{\includegraphics[width=\textwidth]{capturas/edit-09-nq8}}
+    %\only<10>{\includegraphics[width=\textwidth]{capturas/edit-10-nq8}}
+    %\only<11>{\includegraphics[width=\textwidth]{capturas/edit-11-nq8}}
+    %\only<12>{\includegraphics[width=\textwidth]{capturas/edit-12-nq8}}
+    %\only<13>{\includegraphics[width=\textwidth]{capturas/edit-13-nq8}}
+    %\only<14>{\includegraphics[width=\textwidth]{capturas/edit-14-nq8}}
+    %\only<15>{\includegraphics[width=\textwidth]{capturas/edit-15-nq8}}
+    %\only<16>{\includegraphics[width=\textwidth]{capturas/edit-16-nq8}}
+    %\only<17>{\includegraphics[width=\textwidth]{capturas/edit-17-nq8}}
+    %\only<18>{\includegraphics[width=\textwidth]{capturas/edit-18-nq8}}
+    %\only<19>{\includegraphics[width=\textwidth]{capturas/edit-19-nq8}}
+    %\only<20>{\includegraphics[width=\textwidth]{capturas/edit-20-nq8}}
+    %\only<21>{\includegraphics[width=\textwidth]{capturas/edit-21-nq8}}
+    %\only<22>{\includegraphics[width=\textwidth]{capturas/edit-22-nq8}}
+    %\only<23>{\includegraphics[width=\textwidth]{capturas/edit-23-nq8}}
+    %\\
+    \uncover<2->{\key{o}}%
+    \uncover<3->{\typed{Mi fotolog}}%
+    \uncover<4->{\longkey{Esc}}
+    \uncover<5->{\key{.}}
+    \uncover<6->{\key{F}\key{f}}
+    \uncover<7->{\key{v}}%
+    \uncover<8->{\key{4}\key{l}}
+    \uncover<9->{\key{c}}%
+    \uncover<10->{\typed{b}}%
+    \uncover<11->{\longkey{Esc}}
+    \uncover<12->{\ldots}
+    \uncover<13->{\key{o}}%
+    \uncover<14->{\typed{...}}%
+    \uncover<15->{\longkey{Ctrl X}\longkey{Ctrl F}}%
+    \uncover<16->{\typed{...}\longkey{Esc}}
+    \uncover<17->{\key{:}\typed{w}\longkey{Enter}}
+    \uncover<18->{\key{f}\key{.}} \\
+    \uncover<18->{\key{g}\key{f}}
+    \uncover<19->{\ldots}
+    \uncover<20->{\longkey{Ctrl O}}
+    \uncover<21->{\ldots}
+    \uncover<22->{\longkey{Ctrl V}}%
+    \uncover<23->{\key{3}\key{j}}
+    \uncover<24->{\key{I}}%
+    \uncover<25->{\typed{$<$a href="{}"$>$}}%
+    \uncover<26->{\longkey{Esc}}
 \end{frame}
 
+%\begin{frame}
+%    \frametitle{Ejemplos de uso de operadores}
+%    \begin{itemize}
+%        \item \key{c}\key{w}\typed{lala}\longkey{Esc}
+%        \item \key{b}\key{y}\key{\$}\key{0}\key{P}
+%        \item \key{d}\key{d}\key{p} 
+%        \item \key{g}\key{g}\key{O}\typed{\#include
+%            "lala.h"}\longkey{Esc}\longkey{Ctrl O}
+%        \item \longkey{Ctrl A}\key{2}\key{j}\key{.}
+%        \item \key{I}\typed{/$*$}\longkey{Esc}\key{A}\typed{$*$/}\longkey{Esc}
+%        \item \key{F}\key{$\{$}\key{d}\key{\%}\key{20}\key{k}\key{p}
+%    \end{itemize}
+%\end{frame}
+
 \begin{frame}
-    \frametitle{Modo ex (línea de comandos)}
+    \frametitle{Modo ex, archivos}
     \begin{itemize}
-        \item \key{:}\typed{e \placeholder{archivo}}\longkey{Enter}
-        \item \key{:}\typed{w \placeholder{archivo}}\longkey{Enter}
+        \item \key{:}\typed{e README}\longkey{Enter}
+        \item \key{:}\typed{w foo.c}\longkey{Enter}
         \item \key{:}\typed{w}\longkey{Enter}
         \item \key{:}\typed{3,\$w}\longkey{Enter}
         \item \key{:}\typed{wq}\longkey{Enter}
-        \item \key{:}\typed{r  \placeholder{archivo}}\longkey{Enter}
-        \item \key{:}\typed{r! \placeholder{comando}}\longkey{Enter}
+        \item \key{:}\typed{q!}\longkey{Enter}
+        \item \key{:}\typed{r bar.py}\longkey{Enter}
+        \item \key{:}\typed{r! find . -name='*.c'}\longkey{Enter}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Modo ex, segunda parte}
+    \frametitle{Modo ex, sustituciones}
+    \begin{itemize}
+        \item \key{:}\typed{\%s/textbf/emph/gc}\longkey{Enter}
+        \item \key{:}\typed{'<,'>s!f($\backslash$(.*$\backslash$)!f(0, $\backslash$1, 0!}\longkey{Enter}
+        \item \key{:}\typed{\%s,UTFSM,<b>\&</b>,g}\longkey{Enter}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Modo ex, varios}
     \begin{itemize}
         \item \key{:}\typed{.,+5d}\longkey{Enter}
-        \item \key{:}\typed{2,\$normal 02fñx\$}\longkey{Enter}
-        \item
-            \key{:}\typed{\%s/textbf/emph/gc}\longkey{Enter}
-        \item \key{:}\typed{g/item/d}\longkey{Enter}
-            \key{:}\typed{g/$\wedge$[ ]$*$\#/normal A \#XXX}\longkey{Enter}
+        \item \key{:}\typed{normal f\#d\$}\longkey{Enter}
+        \item \key{:}\typed{g/foo/d}\longkey{Enter}
+        \item \key{:}\typed{g//normal I/*}\longkey{Ctrl V}\longkey{Esc}\typed{A*/}\longkey{Enter}
         \item \key{:}\typed{1,.j}\longkey{Enter}
+        \item \key{:}\typed{earlier 5m}\longkey{Enter}
+        \item \key{:}\typed{\%!sort}\longkey{Enter}
+
     \end{itemize}
 \end{frame}
 
