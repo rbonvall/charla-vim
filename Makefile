@@ -6,5 +6,6 @@ $(NAME).pdf: $(NAME).tex
 	pdflatex $<
 
 clean:
-	-rm *.{aux,log,nav,out,pdf,snm,toc,vrb,dvi}
+	rm $(NAME).aux $(NAME).log $(NAME).nav $(NAME).out $(NAME).pdf $(NAME).snm $(NAME).toc
 
+.PHONY: all clean
