@@ -148,11 +148,8 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Movimientos \cmd{\hspace{1.5em}}}
+    \frametitle{Movimientos}
     \begin{itemize}
-        \item \good \key{h}, \key{j}, \key{k}, \key{l} =
-              \bad \key{$\leftarrow$}, \key{$\downarrow$},
-                 \key{$\uparrow$}, \key{$\rightarrow$}.
         \item \key{w}, \key{b}, \key{e}:
             \foreign{word}, \foreign{beginning of word}, \foreign{end of word}.
         \item \key{0}, \key{\$}: comienzo, final de línea
@@ -201,133 +198,113 @@
     \uncover<17->{\key{n}}
 \end{frame}
 
-%  \item \key{\%}, \key{$*$}, \key{\#}
-%  \item \key{`}\anykey, \key{'}\anykey
-%  \item \longkey{Ctrl O}, \longkey{Ctrl I}
-%  \item \key{H}, \key{M}, \key{L}
-
 \begin{frame}
-    \frametitle{Movimientos}
-    \framesubtitle{Movimientos del contenido de la pantalla}
+    \frametitle{Edición simple}
     \begin{itemize}
-        \item \longkey{Ctrl F}: desplaza una página hacia adelante
-            (\foreign{forwards})
-        \item \longkey{Ctrl B}: desplaza una página hacia atras
-            (\foreign{backwards})
-        \item \longkey{Ctrl E}: desplaza una línea hacia arriba
-            (\foreign{extra lines})
-        \item \longkey{Ctrl Y}: desplaza una línea hacia abajo
-        \item \key{z}\key{z}: deja la línea actual en el centro de la pantalla
+        \item \key{x}: suprime caracter
+        \item \key{$\sim$}: minúscula/mayúscula
+        \item \key{p}, \key{P}: pega después, antes
+        \item \key{J}: unir líneas
+        \item \key{r}\anykey: reemplazar caracter
+        \item \longkey{Ctrl A}, \longkey{Ctrl X}: incrementar, decrementar número
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Movimientos}
-    \framesubtitle{Movimientos relativos a la pantalla}
+    \frametitle{Edición con movimiento}
     \begin{itemize}
-        \item \key{H}: mueve el cursor a la primera línea de la pantalla
-            (\foreign{higher})
-        \item \key{M}: mueve el cursor a la línea del medio de la pantalla
-            (\foreign{middle})
-        \item \key{L}: mueve el cursor a la última línea de la pantalla
-            (\foreign{lower})
+        \item \key{d}\cmd{mov}: \emph{delete}
+        \item \key{y}\cmd{mov}: \emph{yank} (copiar)
+        \item \key{c}\cmd{mov}: \emph{change}
+        \item \key{$>$}\cmd{mov}: aumentar indentación
+        \item \key{g}\key{u}\cmd{mov}: cambia a mayúsculas
+        \item \key{g}\key{?}\cmd{mov}: rot13
+        \item \key{g}\key{q}\cmd{mov}: dar formato
+        \item \key{=}\cmd{mov}: reindentar código
+        \item Al usar el mismo comando como movimiento,\\ se aplica a la línea actual.
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Movimientos}
-    \framesubtitle{Movimientos por línea}
+    \frametitle{Seudomovimientos}
     \begin{itemize}
-        \item \key{g}\key{g}: mueve el cursor a la primera línea del archivo
-            %(\foreign{go, go!})
-        \item \key{G}: mueve el cursor a la última línea del archivo
-            %(\foreign{GO!})
-        \item \cmdcount\key{g}\key{g}: mueve  el cursor a la línea \cmdcount.
-        \item \cmdcount\key{G}: ídem
-        \item \cmdcount\key{\%}: mueve el cursor a la línea correspondiente al
-            \cmdcount\ porciento de las líneas del archivo
+        \item \cmd{op}\key{a}\key{$)$}: lo que está entre paréntesis
+        \item \cmd{op}\key{i}\key{$)$}: lo que está entre paréntesis, sin incluírlos
+        \item \cmd{op}\key{a}\key{s}: una oración
+        \item \cmd{op}\key{a}\key{p}: un párrafo
+        \item \cmd{op}\key{i}\key{"}: lo que está entre comillas
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Movimientos}
-    \framesubtitle{Movimientos por objetos de texto}
+    \frametitle{Cómo comenzar a escribir}
     \begin{itemize}
-        \item \key{$($}, \key{$)$}: movimiento por oración
-        \item \key{$\{$}, \key{$\}$}: movimiento por párrafo
+        \item \key{i}, \key{a}: antes, después del cursor
+        \item \key{I}, \key{A}: al principio, final de la línea
+        \item \key{o}, \key{O}: en una línea nueva después, antes de la actual
+        \item \key{c}\anykey: cambia texto
+        \item al finalizar, presione \longkey{Esc}
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Movimientos}
-    \framesubtitle{Movimientos en una línea}
-    \begin{itemize}
-        \item \key{0}:  principio de la línea
-        \item \key{\$}:  final de la línea
-        \item \key{$\wedge$}: primer caracter no blanco
-        \item \key{f}\anykey: próxima ocurrencia de \anykey{} en la línea
-            (\foreign{find})
-        \item \key{F}\anykey: anterior ocurrencia de \anykey{} en la línea
-        \item \key{t}\anykey: un caracter antes del próximo \anykey{}
-            (\foreign{`til})
-        \item \key{T}\anykey: un caracter después del anterior \anykey{}
-        \item \key{;}: repite el último \key{f}, \key{F}, \key{t} o \key{T}.
-    \end{itemize}
+    %\only<1>{\includegraphics[width=\textwidth]{capturas/edit-01-nq8}}
+    %\only<2>{\includegraphics[width=\textwidth]{capturas/edit-02-nq8}}
+    %\only<3>{\includegraphics[width=\textwidth]{capturas/edit-03-nq8}}
+    %\only<4>{\includegraphics[width=\textwidth]{capturas/edit-04-nq8}}
+    %\only<5>{\includegraphics[width=\textwidth]{capturas/edit-05-nq8}}
+    %\only<6>{\includegraphics[width=\textwidth]{capturas/edit-06-nq8}}
+    %\only<7>{\includegraphics[width=\textwidth]{capturas/edit-07-nq8}}
+    %\only<8>{\includegraphics[width=\textwidth]{capturas/edit-08-nq8}}
+    %\only<9>{\includegraphics[width=\textwidth]{capturas/edit-09-nq8}}
+    %\only<10>{\includegraphics[width=\textwidth]{capturas/edit-10-nq8}}
+    %\only<11>{\includegraphics[width=\textwidth]{capturas/edit-11-nq8}}
+    %\only<12>{\includegraphics[width=\textwidth]{capturas/edit-12-nq8}}
+    %\only<13>{\includegraphics[width=\textwidth]{capturas/edit-13-nq8}}
+    %\only<14>{\includegraphics[width=\textwidth]{capturas/edit-14-nq8}}
+    %\only<15>{\includegraphics[width=\textwidth]{capturas/edit-15-nq8}}
+    %\only<16>{\includegraphics[width=\textwidth]{capturas/edit-16-nq8}}
+    %\only<17>{\includegraphics[width=\textwidth]{capturas/edit-17-nq8}}
+    %\only<18>{\includegraphics[width=\textwidth]{capturas/edit-18-nq8}}
+    %\only<19>{\includegraphics[width=\textwidth]{capturas/edit-19-nq8}}
+    %\only<20>{\includegraphics[width=\textwidth]{capturas/edit-20-nq8}}
+    %\only<21>{\includegraphics[width=\textwidth]{capturas/edit-21-nq8}}
+    %\only<22>{\includegraphics[width=\textwidth]{capturas/edit-22-nq8}}
+    %\only<23>{\includegraphics[width=\textwidth]{capturas/edit-23-nq8}}
+    %\\
+    \uncover<2->{\key{6}\key{g}\key{g}}
+    \uncover<3->{\key{f}\key{m}}
+    \uncover<4->{\key{c}\key{i}\key{w}}%
+    \uncover<5->{\typed{enumerate}}%
+    \uncover<6->{\longkey{Esc}}
+    \uncover<7->{\key{5}\key{j}\key{h}}
+    \uncover<8->{\key{.}}
+    \uncover<9->{\key{4}\key{k}}
+    \uncover<10->{\key{A}}%
+    \uncover<11->{\typed{,}}%
+    \uncover<12->{\longkey{Esc}}
+    \uncover<13->{\key{j}}
+    \uncover<14->{\key{.}}
+    \uncover<15->{\key{j}}
+    \uncover<16->{\key{.}}
+    \uncover<17->{\key{j}}
+    \uncover<18->{\key{.}}
+    \uncover<19->{\key{r}\key{.}}
+    \uncover<20->{\key{k}}
+    \uncover<21->{\key{F}\key{o}}
+    \uncover<22->{\key{x}\key{p}}
+    \uncover<23->{\key{d}\key{a}\key{p}}
+    \uncover<24->{\key{$\}$}}
+    \uncover<25->{\key{P}}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Movimientos}
-    \framesubtitle{Otros movimientos}
+    \frametitle{Modo visual (aka seleccionar)}
     \begin{itemize}
-        \item \key{\%}: busca el paréntesis apareado con el que está bajo el
-            cursor 
-            \begin{itemize}
-                \item funciona para
-                    \texttt{()},
-                    \texttt{\{\}},
-                    \texttt{[]},
-                    \texttt{\#if \#endif},
-                    \texttt{/* */}.
-            \end{itemize}
-        \item \longkey{Ctrl O}: retorna a la posición anterior antes del último
-            movimiento (\foreign{old position})
-        \item \longkey{Ctrl I}: deshace el \longkey{Ctrl O}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Operaciones básicas}
-    \begin{itemize}
-        \item \key{$\sim$}:  cambia minúsculas/mayúsculas del caracter bajo el
-            cursor
-        \item \key{x}:  suprime el caracter bajo el cursor
-        \item \key{X}:  suprime el caracter anterior al cursor
-        \item \key{r}\anykey:  reemplaza el caracter bajo el cursor por \anykey
-        %\item \key{m}\anykey
-        \item \longkey{Ctrl A}:  incrementa el número bajo el cursor
-            (\foreign{add})
-        \item \longkey{Ctrl X}:  decrementa el número bajo el cursor
-            (\foreign{extract})
-        %\item \key{u}: deshace el último comando (\foreign{undo})
-        %\item \key{.}: repite el último comando
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{¿Cómo comenzar a escribir?}
-    \begin{itemize}
-        \item \key{i}:  comienza a escribir antes del cursor (\foreign{insert})
-        \item \key{s}:  comienza a escribir encima del cursor
-            (\foreign{substitute})
-        \item \key{a}:  comienza a escribir después del cursos
-            (\foreign{append})
-        \item \key{I}:  comienza a escribir al principio de la línea
-        \item \key{A}:  comienza a escribir al final de la línea
-        \item \key{o}:  comienza a escribir en una línea nueva a continuación
-            de la actual (\foreign{open new line})
-        \item \key{O}:  comienza a escribir en una línea nueva antes de la
-            actual
-        \item<2> Al terminar de escribir, presionar \longkey{Esc}
+        \item \key{v}: selecciona caracteres
+        \item \key{V}: selecciona líneas
+        \item \longkey{Ctrl V}: selecciona bloques
+        \item \key{g}{v}: repite selección anterior
     \end{itemize}
 \end{frame}
 
@@ -336,26 +313,10 @@
     \begin{itemize}
         \item \longkey{Ctrl H}, \longkey{Ctrl U}: borra el caracter
             anterior/hasta el final de la línea
-        \item \longkey{Ctrl T}, \longkey{Ctrl D}: indenta/dedenta la línea
-            actual
-        \item \longkey{Ctrl Y}, \longkey{Ctrl E}: copia el caracter arriba/abajo
-            del cursor
-        \item \longkey{Ctrl P}, \longkey{Ctrl N}: completa la palabra que se
-            está escribiendo
-        \item \longkey{Ctrl X}\longkey{Ctrl F}, \longkey{Ctrl X}\longkey{Ctrl L}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Operadores}
-    \begin{itemize}
-        \item \key{c}\cmd{mov}, \key{d}\cmd{mov}, \key{y}\cmd{mov}
-        \item \key{g}\key{$\sim$}\cmd{mov}, \key{g}\key{u}\cmd{mov},
-            \key{g}\key{U}\cmd{mov}
-        \item \key{!}\cmd{mov}, \key{=}\cmd{mov}, \key{g}\key{q}\cmd{mov},
-            \key{g}\key{?}\cmd{mov}
-        \item \key{$>$}\cmd{mov}, \key{$<$}\cmd{mov}
-        \item Comando repetido se aplica a la línea actual
+        \item \longkey{Ctrl T}, \longkey{Ctrl D}: indenta/dedenta
+        \item \longkey{Ctrl Y}, \longkey{Ctrl E}: copia el caracter de arriba, abajo
+        \item \longkey{Ctrl P}, \longkey{Ctrl N}: completa la palabra
+        \item \longkey{Ctrl X}\longkey{Ctrl F}: completa con nombre de archivo
     \end{itemize}
 \end{frame}
 
@@ -370,24 +331,6 @@
         \item \longkey{Ctrl A}\key{2}\key{j}\key{.}
         \item \key{I}\typed{/$*$}\longkey{Esc}\key{A}\typed{$*$/}\longkey{Esc}
         \item \key{F}\key{$\{$}\key{d}\key{\%}\key{20}\key{k}\key{p}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Ejemplos de operadores con pseudomovimientos}
-    \begin{itemize}
-        \item \key{d}\key{i}\key{w}
-        \item \key{g}\key{q}\key{a}\key{p}
-        \item \key{c}\key{i}\key{$\}$}\typed{Blah blah}\longkey{Esc}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Modo visual}
-    \begin{itemize}
-        \item \key{v}: selección por caracteres
-        \item \key{V}: selección por líneas
-        \item \longkey{Ctrl V}: selección en bloque
     \end{itemize}
 \end{frame}
 
